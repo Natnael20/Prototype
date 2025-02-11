@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://preview.colorlib.com/theme/timezone/assets/img/logo/logo.png.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Prototype</title>
+</head>
+<style>
+    
+        .time {
+            display: flex;
+            gap: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .time div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .time div div {
+            font-size: 30px;
+            font-weight: bold;
+        }
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="row bg-danger d-flex justify-content-end align-items-end">
+            <div class="col-lg-1 right-content">
+                <div class="social-media">
+                    <a href="#" target="_blank" class="social-icon facebook">
+                        <i class="fa fa-facebook" aria-hidden="true"></i> <!-- Facebook Icon -->
+                    </a>
+                    <a href="#" target="_blank" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i> <!-- YouTube Icon -->
+                    </a>
+                    <a href="#" target="_blank" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="first-container">
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img
+                    src="https://preview.colorlib.com/theme/timezone/assets/img/logo/logo.png.webp"
+                    class="img-fluid" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item mt-2">
+                            <a class="nav-link text-danger" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <div class="dropdown">
+                                <a class="nav-link" id="dropdownMenuButton">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="drop-item" href="login.html">Login</a></li>
+                                    <li><a class="drop-item" href="cart.html">Cart</a></li>
+                                    <li><a class="drop-item" href="confirmation.html">Confirmation</a></li>
+                                    <li><a class="drop-item" href="checkout.html">Product Checkout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse mt-2 justify-content-end">
+                    <div class="right-content">
+                        <a href="text-decoration-none text-black">
+                            <i class="fa fa-microphone" style="margin-top: 7px;" aria-hidden="true"></i>
+                        </a>
+                        <div class="seeach-button">
+                            <button href="" class="openBtn" onclick="openSearch()">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                            <div id="myOverlay" class="overlay">
+                                <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+                                <div class="overlay-content">
+                                    <form action="/action_page.php">
+                                        <input type="text" placeholder="Search.." list="suggestions" autocomplete="on" class="form-control" name="search">
+                                            <datalist id="suggestions">
+                                                <option value="Meat">
+                                                <option value="Fish">
+                                                <option value="Dairy food">
+                                                <option value="Drinks">
+                                                <option value="Banana">
+                                            </datalist>
+                                            <button class="microphone" type="button"><i class="fa fa-microphone"></i></button>
+                                        <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="text-decoration-none text-black" href="login.html">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </a>
+                        <a class="text-decoration-none text-black" href="cart.html">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid scroll" id="second-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 second-col">
+                    <h1>Select Your New Perfect Style</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo velit id earum fugiat
+                        atque, placeat eum ullam iure dicta sequi optio hic modi.</p>
+                    <div class="second-col-button">
+                        <botton class="btn">Shop Now</botton>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6 second-col2">
+                    <img src="https://preview.colorlib.com/theme/timezone/assets/img/hero/watch.png" alt=""
+                        class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn-top" onclick="scrollToTop()"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </button>
+                <div class="chat-img-container">
+                    <span class="badge">1</span>
+                    <img src="https://www.shutterstock.com/image-vector/call-center-customer-support-vector-600nw-2285364015.jpg" alt="customer assistant" class="img-fluid chat-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="third-container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 text-center">
+                <div class="service-pic">
+                    <img src="https://preview.colorlib.com/theme/karma/img/features/f-icon1.png.webp" alt
+                        class="img-fluid">
+                </div>
+                <div class="service-details">
+                    <h4>Free Delivery</h4>
+                    <p>Free Shipping on all order
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center">
+                <div class="service-pic">
+                    <img src="https://preview.colorlib.com/theme/karma/img/features/f-icon2.png.webp" alt
+                        class="img-fluid">
+                </div>
+                <div class="service-details">
+                    <h4>Return Policy
+                    </h4>
+                    <p>Free returns available.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center">
+                <div class="service-pic">
+                    <img src="https://preview.colorlib.com/theme/karma/img/features/f-icon3.png.webp" alt
+                        class="img-fluid">
+                </div>
+                <div class="service-details">
+                    <h4>24/7 Support
+                    </h4>
+                    <p>Available anytime, anywhere
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center">
+                <div class="service-pic">
+                    <img src="https://preview.colorlib.com/theme/karma/img/features/f-icon4.png.webp" alt
+                        class="img-fluid">
+                </div>
+                <div class="service-details">
+                    <h4>Secure Payment
+                    </h4>
+                    <p>Safe and reliable transactions
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="forth-container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="right-product d-flex justify-content-between align-content-center">
+                    <div class="right-intro">
+                        <h3>Deals of the Week
+                        </h3>
+                    </div>
+                </div>
+                <div class="headphone-product mt-4">
+                    <img src="https://preview.colorlib.com/theme/onetech/images/deals.png" class="img-fluid" alt="">
+                    <div class="product-info d-flex justify-content-between mt-4">
+                        <div class="product-name">
+                            <h2>Beoplay H7</h2>
+                        </div>
+                        <div class="product-price">
+                            <h3>$300.00</h3>
+                        </div>
+                    </div>
+                    <div class="time-countdown d-flex justify-content-between align-items-center">
+                        <div class="warning-info">
+                            <h4>Hurry up</h4>
+                            <h6>Offer ends in</h6>
+                        </div>
+                        <div class="time">
+                            <div class="hour">
+                                <div id="hours">00</div>
+                                <h6>Hours</h6>
+                            </div>
+                            <div class="minutes">
+                                <div id="minutes">00</div>
+                                <h6>Minutes</h6>
+                            </div>
+                            <div class="seconds">
+                                <div id="seconds">00</div>
+                                <h6>Seconds</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="row d-flex justify-content-between align-items-center text-center">
+                    <div class="col-lg-4">
+                        <a href="product.html" style="text-decoration: none;">
+                            <div class="mobile product">
+                                <img src="https://preview.colorlib.com/theme/onetech/images/featured_1.png" alt="">
+                                <div class="mobile-info mt-4">
+                                    <h4>Samsung J5</h4>
+                                    <h5>$250.00</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 mt-1">
+                        <div class="camera product">
+                            <img src="https://preview.colorlib.com/theme/onetech/images/featured_5.png" alt="">
+                            <div class="camera info mt-5">
+                                <h4>Sonny MRDZX31OW</h4>
+                                <h5>$379.00</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="laptop mt-3 product">
+                            <img src="https://preview.colorlib.com/theme/onetech/images/featured_7.png" alt="">
+                            <div class="laptop-info mt-5">
+                                <h4>Lenovo IdeaPad</h4>
+                                <h5>$599.00</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 7%;">
+                        <div class="col-lg-4">
+                            <div class="Apple-ipod mt-1 product">
+                                <img src="https://preview.colorlib.com/theme/onetech/images/featured_2.png" alt="">
+                                <div class="Apple-ipod-info mt-5">
+                                    <h4>Apple iPod shuffle</h4>
+                                    <h5>$379.00</h6>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-lg-4">
+                            <div class="Luna mt-1 product">
+                                <img src="https://preview.colorlib.com/theme/onetech/images/featured_4.png" alt="">
+                                <div class="Luna-info mt-5">
+                                    <h4>Luna Smartphone</h4>
+                                    <h5>$225.00</h6>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-lg-4">
+                            <div class="Digitus mt-1 product">
+                                <img src="https://preview.colorlib.com/theme/onetech/images/featured_8.png" alt="">
+                                <div class="Digitus-info mt-5">
+                                    <h4>Digitus EDNET...</h4>
+                                    <h5>$519.00</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="sixth-container">
+        <div class="container">
+            <div class="slider">
+                <div class="slide">
+                    <div class="computer computer-1 d-flex justify-content-center align-items-center">
+                        <div class="computer-1-info w-50">
+                            <p>Laptop</p>
+                            <h1>Macbook Air 13</h1>
+                            <ul>
+                                <li>Display: 13.6-inch Liquid Retina display with True Tone</li>
+                                <li>Processor: Apple M2 chip with 8-core CPU & up to 10-core GPU</li>
+                                <li>Battery Life: Up to 18 hours of battery life</li>
+                                <li>Memory & Storage: 8GB RAM (configurable up to 24GB) & 256GB SSD (upgradable)</li>
+                            </ul>
+                            <button class="btn product-btn w-25">Explore</button>
+                        </div>
+                        <div class="computer-img">
+                            <img src="https://preview.colorlib.com/theme/onetech/images/banner_2_product.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="computer computer-2 d-flex justify-content-center align-items-center">
+                        <div class="computer-2-info w-50">
+                            <p>Laptop</p>
+                            <h1>Macbook Air 13</h1>
+                            <ul>
+                                <li>Display: 13.6-inch Liquid Retina display with True Tone</li>
+                                <li>Processor: Apple M2 chip with 8-core CPU & up to 10-core GPU</li>
+                                <li>Battery Life: Up to 18 hours of battery life</li>
+                                <li>Memory & Storage: 8GB RAM (configurable up to 24GB) & 256GB SSD (upgradable)</li>
+                            </ul>
+                            <button class="btn product-btn w-25">Explore</button>
+                        </div>
+                        <div class="computer-img">
+                            <img src="https://preview.colorlib.com/theme/onetech/images/banner_2_product.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="computer computer-3 d-flex justify-content-center align-items-center">
+                        <div class="computer-3-info w-50">
+                            <p>Laptop</p>
+                            <h1>Macbook Air 13</h1>
+                            <ul>
+                                <li>Display: 13.6-inch Liquid Retina display with True Tone</li>
+                                <li>Processor: Apple M2 chip with 8-core CPU & up to 10-core GPU</li>
+                                <li>Battery Life: Up to 18 hours of battery life</li>
+                                <li>Memory & Storage: 8GB RAM (configurable up to 24GB) & 256GB SSD (upgradable)</li>
+                            </ul>
+                            <button class="btn product-btn w-25">Explore</button>
+                        </div>
+                        <div class="computer-img">
+                            <img src="https://preview.colorlib.com/theme/onetech/images/banner_2_product.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="seventh-container">
+        <div class="container">
+            <div class="hot-info">
+                <h3>Hot Best Sellers</h3>
+            </div>
+            <div class="row mt-5 d-flex justify-content-around">
+                <div class="col-lg-4">
+                    <div class="Xiaomi item  d-flex gap-4">
+                        <div class="Xiaomi-img">
+                            <img src="https://preview.colorlib.com/theme/onetech/images/best_1.png" alt="">
+                        </div>
+                        <div class="Xiaomi-info">
+                            <p>Phone</p>
+                            <h6>Xiaomi Redemi 4</h6>
+                            <h6>$250.00</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="headphone item d-flex gap-4">
+                        <div class="headphone-pic">
+                            <img src="https://preview.colorlib.com/theme/onetech/images/best_3.png" alt="">
+                        </div>
+                        <div class="headphone-info">
+                            <p>Headphone</p>
+                            <h6>Beoplay H7</h6>
+                            <h6>$300.00</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="watch item d-flex gap-4">
+                        <div class="watch-pic">
+                            <img src="https://preview.colorlib.com/theme/onetech/images/best_5.png" alt="">
+                        </div>
+                        <div class="watch-info">
+                            <p>Watch</p>
+                            <h6>Apple Watch 4</h6>
+                            <h6>$350.00</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-around">
+                <div class="col-lg-4  mt-5">
+                    <div class="earphone item d-flex gap-4">
+                        <div class="earphone-pic">
+                            <img src="https://preview.colorlib.com/theme/onetech/images/best_2.png" alt="">
+                        </div>
+                        <div class="earphone-info">
+                            <p>Earphone</p>
+                            <h6>Beoplay H5</h6>
+                            <h6>$250.00</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                    <div class="samsung item d-flex gap-4">
+                        <div class="samsung-pic">
+                            <img src="https://preview.colorlib.com/theme/onetech/images/best_4.png" alt="">
+                        </div>
+                        <div class="samsung-info">
+                            <p>Phone</p>
+                            <h6>Samsung Galaxy J5</h6>
+                            <h6>$450.00</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                    <div class="samsung-ipad item d-flex gap-4">
+                        <div class="samsung-ipad-pic">
+                            <img src="https://preview.colorlib.com/theme/onetech/images/best_6.png" alt="">
+                        </div>
+                        <div class="samsung-ipad-info">
+                            <p>Tablet</p>
+                            <h6>Samsung Tab Pro S</h6>
+                            <h6>$650.00</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="footer-container">
+        <div class="container">
+            <img src="https://preview.colorlib.com/theme/timezone/assets/img/logo/logo.png.webp" class="img-fluid"
+                alt="logo">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 mt-4">
+                    <h3 class="text-start p-3">About Time Zone</h3>
+                    <ul class="list-group footer-list">
+                        <li class="list-group-item">This is Time Zone</li>
+                        <li class="list-group-item">Durability</li>
+                        <li class="list-group-item">Whistleblower Service</li>
+                        <li class="list-group-item">Work with us</li>
+                        <li class="list-group-item">Press room</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-4">
+                    <h3 class="text-start p-3">Customer with us
+                    </h3>
+                    <ul class="list-group footer-list">
+                        <li class="list-group-item">Club Time Zone</li>
+                        <li class="list-group-item">Business</li>
+                        <li class="list-group-item">Data protection</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-4">
+                    <h3 class="text-start p-3">Contact Us</h3>
+                    <ul class="list-group footer-list">
+                        <li class="list-group-item">Find Stores
+                        </li>
+                        <li class="list-group-item">Customer Service
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-4">
+                    <h3 class="text-start p-3">About the website</h3>
+                    <ul class="list-group footer-list">
+                        <li class="list-group-item">Time Zone's e-commerce terms and conditions
+                        </li>
+                        <li class="list-group-item">Privacy Policy
+                        </li>
+                        <li class="list-group-item">Cookies</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-sm-6 mt-5">
+                    <h5 class="mt-5">Download our app</h5>
+                    <div class="blend-container">
+                        <img src="data:image/png;base64,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"
+                            class="img-fluid w-75" alt="App Logos">
+                    </div>
+                </div>
+            </div>
+            <p class="mt-5">Copyright ©2023 -
+                <script>document.write(new Date().getFullYear())</script> All rights reserved
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
