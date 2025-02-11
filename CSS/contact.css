@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #ff2020;
+    --white: #fff;
+    --grey:#f0f0f2;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray2: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Josefin Sans",sans-serif;
+    color: #0b1c39;
+    margin-top: 0px;
+    font-style: normal;
+}
+.second-container {
+    background-color: var(--grey);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:999px) {
+    .second-container {
+        height: 50vh;
+    }
+}
+
+.map {
+    padding: 0;
+    margin: 0;
+}
+
+iframe {
+    width: 100%;
+
+}
+
+.contact-page h1 {
+    margin-top: 25%;
+}
+
+.third-container > .row {
+    display: flex;
+    justify-content: center;
+}
+
+.reach {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.location-logo i, .telephone-logo i, .envelope-logo i{
+    font-size: 1.5rem;
+}
+
+.telephone-logo i {
+    margin-right: 15px;
+}
+
+.telephone-info {
+    margin-right: 25px;
+}
+
+.user-input {
+    margin-top:5%;
+    display: flex;
+    gap: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+
+@media screen and (max-width: 768px) {
+    .form-group {
+        display: grid;
+    }
+}
+
+.contact-button {
+    padding: 10px 25px;
+    background-color: var(--red);
+}
+
+.contact-button a {
+    color: #fff;
+}
+
+.contact-button:hover > a {
+    color: #000;
+}

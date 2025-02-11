@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main: rgb(130, 139, 178);
+    --second: rgb(37, 119, 253);
+    --red: #ff2020;
+    --white: #fff;
+    --grey:#f0f0f2;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray2: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Josefin Sans",sans-serif;
+    color: #0b1c39;
+    margin-top: 0px;
+    font-style: normal;
+}
+
+.second-container {
+    background-color: var(--grey);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:800px) {
+    .second-container {
+        height: 50vh;
+    }
+}
+
+.login-page h1 {
+    margin-top: 25%;
+}
+
+/*---------------------------------------------------------------*/
+
+.third-container {
+    margin-top: 10%;
+}
+
+.third-container > .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+#background {
+    background-image: linear-gradient(90deg, rgb(176, 142, 173) 0%, rgb(75, 48, 73) 64%, rgb(176, 142, 173) 100%);
+    background-size: 200%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register {
+    width: 80%;
+    color: #fff;
+}
+
+.register .btn {
+    padding: 20px 20px;
+    color: white;
+    background-color: inherit;
+    border: 1px solid #fff;
+}
+
+.register .btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.log {
+    padding: 10px;
+    margin-top: 10%;
+}
+
+.form-group {
+    display: grid;
+    width: 50%;
+    margin-top: 15%;
+}
+
+.form-group input {
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    padding: 10px 10px;
+}
+
+.form-check input {
+    border: 1px solid black;
+}
+
+.login-button {
+    margin-top: 10%;
+}
+
+.login-button > .btn {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid red;
+    color: black;
+}
+
+.login-button > .btn:hover {
+    background-color: red;
+    color: white;
+}

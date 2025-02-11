@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css">
+    <link rel="stylesheet" href="/CSS/shop.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Cart</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row bg-danger d-flex justify-content-end align-items-end">
+            <div class="col-lg-1 right-content">
+                <div class="social-media">
+                    <a href="#" target="_blank" class="social-icon facebook">
+                        <i class="fa fa-facebook" aria-hidden="true"></i> <!-- Facebook Icon -->
+                    </a>
+                    <a href="#" target="_blank" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i> <!-- YouTube Icon -->
+                    </a>
+                    <a href="#" target="_blank" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="first-container">
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img
+                    src="https://preview.colorlib.com/theme/timezone/assets/img/logo/logo.png.webp"
+                    class="img-fluid" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item mt-2">
+                            <a class="nav-link text-danger" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <div class="dropdown">
+                                <a class="nav-link" id="dropdownMenuButton">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="drop-item" href="login.html">Login</a></li>
+                                    <li><a class="drop-item" href="cart.html">Cart</a></li>
+                                    <li><a class="drop-item" href="confirmation.html">Confirmation</a></li>
+                                    <li><a class="drop-item" href="checkout.html">Product Checkout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse mt-2 justify-content-end">
+                    <div class="right-content">
+                        <a href="text-decoration-none text-black">
+                            <i class="fa fa-microphone" style="margin-top: 7px;" aria-hidden="true"></i>
+                        </a>
+                        <div class="seeach-button">
+                            <button href="" class="openBtn" onclick="openSearch()">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                            <div id="myOverlay" class="overlay">
+                                <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+                                <div class="overlay-content">
+                                    <form action="/action_page.php">
+                                        <input type="text" placeholder="Search.." list="suggestions" autocomplete="on" class="form-control" name="search">
+                                            <datalist id="suggestions">
+                                                <option value="Meat">
+                                                <option value="Fish">
+                                                <option value="Dairy food">
+                                                <option value="Drinks">
+                                                <option value="Banana">
+                                            </datalist>
+                                            <button class="microphone" type="button"><i class="fa fa-microphone"></i></button>
+                                        <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="text-decoration-none text-black" href="login.html">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </a>
+                        <a class="text-decoration-none text-black" href="cart.html">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid d-flex justify-content-center align-items-center text-center scroll" id="second-container">
+        <div class="container">
+            <h1 class="fw-bolder text-uppercase">Cart</h1>
+        </div>
+    </div> 
+    <div class="container w3-animate-bottom mt-md-5 mt-sm-3">
+        <div class="info">
+            <div class="products">
+                <p>Product</p>
+            </div>
+            <div class="product-details">
+                <div class="price">
+                    <p>price</p>
+                </div>
+                <div class="quantity">
+                    <p>quantity</p>
+                </div>
+                <div class="total">
+                    <p>total</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <main>
+            <div class="product1 mt-5">
+                <div class="product1-img d-flex align-items-left gap-3">
+                    <img src="https://preview.colorlib.com/theme/onetech/images/banner_2_product.png" alt="product1"
+                        class="img-fluid" style="width: 20%;">
+                    <div class="product1-titel">
+                        <h5>Macbook pro 15 2017</h5>
+                    </div>
+                </div>
+                <div class="product1-details item">
+                    <div class="product1-price">
+                        <p>$45,743</p>
+                    </div>
+                    <div class="product1-quantity">
+                        <button class="btn add-btn">+</button>
+                        <input type="text" name="number" class="amount" value="1" readonly>
+                        <button class="btn subtract-btn">-</button>
+                    </div>
+                    <div class="product1-total">
+                        <p>$<span class="total-price">45,743</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="product2 mt-5">
+                <div class="product2-img d-flex align-items-center gap-3">
+                    <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/card2.png.webp" alt="product1"
+                        class="img-fluid w-25">
+                    <div class="product1-titel">
+                        <h5>Pixelstore Fresh Blackberry</h5>
+                    </div>
+                </div>
+                <div class="product2-details item">
+                    <div class="product1-price">
+                        <p>$45,743</p>
+                    </div>
+                    <div class="product2-quantity">
+                        <button class="btn add-btn">+</button>
+                        <input type="text" name="number" class="amount" value="1" readonly>
+                        <button class="btn subtract-btn">-</button>
+                    </div>
+                    <div class="product2-total">
+                        <p>$<span class="total-price">45,743</span></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="main-buttons mt-5 w3-animate-bottom">
+            <div class="inside-buttons">
+                <div class="proceed">
+                    <button class="btn">Update Cart</button>
+                </div>
+                <div class="update-products">
+                    <button class="btn">Close Coupon</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5 d-flex justify-content-end w3-border-bottom w3-border-top">
+        <div class="subtotal d-flex justify-content-between mt-5 gap-5">
+            <p class="fw-bolder">Subtotal</p>
+            <p id="subtotalAmount">$91,486</p>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="shipping subtotal d-flex gap-2 justify-content-end mt-5">
+            <div class="d-flex gap-5">
+                <div class="shipping-titel">
+                    <p class="fw-bolder">Shopping</p>
+                </div>
+                <div class="shopping-vals d-grid justify-content-end">
+                    <div class="val d-flex justify-content-end">
+                        <p>Flat Rate: $5.00
+                        </p>
+                        <div class="form-check">
+                            <input type="radio" id="radio" name="optradio" value="option1">
+                        </div>
+                    </div>
+                    <div class="val d-flex justify-content-end ">
+                        <p>Free Shipping</p>
+                        <div class="form-check">
+                            <input type="radio" id="radio"  name="optradio" value="option2">
+                        </div>
+                    </div>
+                   <div class="val d-flex justify-content-end">
+                     <p>Flat Rate: $10.00
+                     </p>
+                     <div class="form-check">
+                         <input type="radio" id="radio"  name="optradio" value="option3">
+                     </div>
+                   </div>
+                    <div class="val d-flex justify-content-end">
+                        <p>Local Delivery: $2.00</p>
+                        <div class="form-check">
+                            <input type="radio" id="radio" name="optradio" value="option4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="updatedDetails-buttons d-flex justify-content-end p-2">
+            <button class="btn">Updated-Details</button>
+        </div>
+        <div class="proceed-buttons d-flex justify-content-end p-2">
+            <button class="btn" id="backHome">Continue Shopping</button>
+            <button class="btn" id="checkoutBtn">Proceed To Checkout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

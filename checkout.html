@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://preview.colorlib.com/theme/timezone/assets/img/logo/logo.png.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css">
+    <link rel="stylesheet" href="/CSS/checkout.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Checkout</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row bg-danger d-flex justify-content-end align-items-end">
+            <div class="col-lg-1 right-content">
+                <div class="social-media">
+                    <a href="#" target="_blank" class="social-icon facebook">
+                        <i class="fa fa-facebook" aria-hidden="true"></i> <!-- Facebook Icon -->
+                    </a>
+                    <a href="#" target="_blank" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i> <!-- YouTube Icon -->
+                    </a>
+                    <a href="#" target="_blank" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="first-container">
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img
+                    src="https://preview.colorlib.com/theme/timezone/assets/img/logo/logo.png.webp"
+                    class="img-fluid" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item mt-2">
+                            <a class="nav-link text-danger" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <div class="dropdown">
+                                <a class="nav-link" id="dropdownMenuButton">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="drop-item" href="login.html">Login</a></li>
+                                    <li><a class="drop-item" href="cart.html">Cart</a></li>
+                                    <li><a class="drop-item" href="confirmation.html">Confirmation</a></li>
+                                    <li><a class="drop-item" href="checkout.html">Product Checkout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse mt-2 justify-content-end">
+                    <div class="right-content">
+                        <a href="text-decoration-none text-black">
+                            <i class="fa fa-microphone" style="margin-top: 7px;" aria-hidden="true"></i>
+                        </a>
+                        <div class="seeach-button">
+                            <button href="" class="openBtn" onclick="openSearch()">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                            <div id="myOverlay" class="overlay">
+                                <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+                                <div class="overlay-content">
+                                    <form action="/action_page.php">
+                                        <input type="text" placeholder="Search.." list="suggestions" autocomplete="on" class="form-control" name="search">
+                                            <datalist id="suggestions">
+                                                <option value="Meat">
+                                                <option value="Fish">
+                                                <option value="Dairy food">
+                                                <option value="Drinks">
+                                                <option value="Banana">
+                                            </datalist>
+                                            <button class="microphone" type="button"><i class="fa fa-microphone"></i></button>
+                                        <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="text-decoration-none text-black" href="login.html">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </a>
+                        <a class="text-decoration-none text-black" href="cart.html">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid d-flex justify-content-center text-center align-items-center scroll" id="second-container">
+        <div class="container">
+            <h1 class="text-uppercase fw-bolder">Check out</h1>
+        </div>
+    </div>
+    <div class="container d-flex gap-2 mt-5 p-2" style="background-color: #e8f0f2;">
+        <h6 class="mt-1">Returning Customer?</h6>
+        <a href="login.html" class="" style="color: rgb(37, 119, 253);">Click here to login</a>
+    </div>
+    <div class="container mt-lg-5">
+        <div class="coupon p-2 d-flex gap-2" style="background-color: #e8f0f2;">
+            <h6 class="mt-1">Have a coupon?</h6>
+            <a href="#" style="color: rgb(37, 119, 253);">Click here to enter your code</a>
+        </div>
+        <div class="coupon-input mt-5 d-grid p-2" style="background-color: #fff;">
+            <input type="text" id="coupon" placeholder="Enter Coupon Code">
+        </div>
+        <button class="apply mt-3 btn" type="submit">Apply coupon</button>
+    </div>
+    <div class="container mt-5" id="billing-container">
+        <div class="row">
+            <div class="col-lg-7">
+                <h1 class="display-6 fw-semibold">Billing Details</h1>
+                <form action="billing" class="billing-form">
+                    <div class="billing-name d-flex gap-3">
+                        <input type="text" id="fname" name="firstname" placeholder="Firstname" required>
+                        <input type="text" id="lname" name="lastname" placeholder="Lastname" required>
+                    </div>
+                    <input type="text" id="company" class="mt-3" placeholder="Company">
+                    <div class="billing-email mt-3 d-flex gap-3">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <input type="text" id="number" name="number" placeholder="Phone number" required>
+                    </div>
+                    <input type="text" id="country" class="mt-3" placeholder="Country" required>
+                    <input type="text" id="address" class="mt-3" placeholder="Address Line 01" required>
+                    <input type="text" id="address" class="mt-3" placeholder="Address Line 02">
+                    <input type="text" id="town/city" class="mt-3" placeholder="Town/City" required>
+                    <input type="text" id="district" class="mt-3" placeholder="District" required>
+                    <input type="text" id="zipcode" class="mt-3" placeholder="zipcode" required>
+                </form>
+                <div class="Account mt-5">
+                    <a href="login.html" class="text-decoration-none">
+                        <div class="form-check d-flex gap-2">
+                            <input type="checkbox" class="form-check-input border-5" id="checkbox">
+                            <p>Create An account</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="shipping-details">
+                    <h3 class="fw-semibold">Shipping-details</h4>
+                    <div class="form-group mt-5 gap-2 d-flex">
+                        <input type="radio" class="form-check-input border-5" id="radio">
+                        <p>Ship to a different address?</p>
+                    </div>
+                </div>
+                <div class="form-group mt-4">
+                    <input type="text" id="notes" class="form-control" name="notes" placeholder="Order Notes">
+                </div>
+            </div>
+            <div class="col-lg-5 order-detail p-5"  style="background-color: #e8f0f2;">
+                <h2 class="fw-semibold display-6">Order Details</h2>
+                <div class="product-title d-flex justify-content-between align-items-center">
+                    <p>Product</p>
+                    <p>Quantity</p>
+                    <p>Total</p>
+                </div>
+                <div class="">
+                    <div class=" d-flex justify-content-between align-items-center text-break">
+                        <p>Macbook pro 15<br>2017</p>
+                        <p>x2</p>
+                        <p>$91,486
+                        </p>
+                    </div>
+                    <div class=" d-flex justify-content-between align-items-center">
+                        <p>Pixelstore<br>Fresh Blackberry</p>
+                        <p>x2</p>
+                        <p>$91,486
+                        </p>
+                    </div>
+                </div>
+                <div class="subtotal mt-5 d-flex justify-content-between align-items-center">
+                    <p class="text-uppercase fw-bold">Subtotal</p>
+                    <p class="fw-bold">$182,972 </p>
+                </div>
+                <div class="shipping d-flex justify-content-between align-items-center">
+                    <p class="text-uppercase fw-bold">Shipping</p>
+                    <p class="fw-bold">Flat Rate:$50.00</p>
+                </div>
+                <div class="total mt-3 d-flex justify-content-between align-items-center">
+                    <p class="text-uppercase fw-bold">Total</p>
+                    <p class="fw-bold">$182,972</p>
+                </div>
+                <div class="payment">
+                    <div class="form-check d-flex gap-2">
+                        <input type="radio" id="radio" class="form-check-input">
+                        <p class="fw-bold">Check Payment</p>
+                    </div>
+                </div>
+                <div class="payment-notice p-4" style="background-color: #fff;">
+                    <p>
+                        Please send a check to Store Name, Store Street, Store Town, Store State / County, Store
+                        Postcode.
+                    </p>
+                </div>
+                <div class="payment-method mt-5 d-flex justify-content-between">
+                    <div class="form-check">
+                        <input type="radio" id="visa" class="form-check-input" name="optradio" value="visa">
+                        <p class="fw-bold text-uppercase">visa</p>
+                        <input type="radio" id="paypal" class="form-check-input" name="optradio" value="paypal">
+                        <p class="fw-bold text-uppercase">paypal</p>
+                        <input type="radio" id="credit-card" class="form-check-input" name="optradio" value="credit-card">
+                        <p class="fw-bold text-uppercase">credit-card</p>
+                        <input type="radio" id="stripe" class="form-check-input" name="optradio" value="stripe">
+                        <p class="fw-bold text-uppercase">stripe</p>
+                    </div>
+                    <div class="payment-icons d-flex gap-2">
+                        <i class="fa fa-cc-visa" aria-hidden="true"></i>
+                        <i class="fa fa-paypal" aria-hidden="true"></i>
+                        <i class="fa-brands fa-apple-pay"></i>
+                        <i class="fa fa-cc-stripe" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="payment-method-info p-4" style="background-color: #fff;">
+                    <p id="payment-message">Select a payment method.</p>
+                </div>
+                <div class="terms mt-5">
+                    <div class="form-check d-flex gap-2">
+                        <input type="checkbox" class="form-check-input">
+                        <p>I’ve read and accept the <a href="#" class="text-capitalize" style="color: #c5322d;">terms & conditions</a></p>
+                    </div>
+                </div>
+                <div class="checkout">
+                    <button id="checkout-button" class="btn w-100">Proceed To</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="footer-container">
+        <div class="container">
+            <img src="https://preview.colorlib.com/theme/timezone/assets/img/logo/logo.png.webp" class="img-fluid"
+                alt="logo">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 mt-4">
+                    <h3 class="text-start p-3">About Time Zone</h3>
+                    <ul class="list-group footer-list">
+                        <li class="list-group-item">This is Time Zone</li>
+                        <li class="list-group-item">Durability</li>
+                        <li class="list-group-item">Whistleblower Service</li>
+                        <li class="list-group-item">Work with us</li>
+                        <li class="list-group-item">Press room</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-4">
+                    <h3 class="text-start p-3">Customer with us
+                    </h3>
+                    <ul class="list-group footer-list">
+                        <li class="list-group-item">Club Time Zone</li>
+                        <li class="list-group-item">Business</li>
+                        <li class="list-group-item">Data protection</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-4">
+                    <h3 class="text-start p-3">Contact Us</h3>
+                    <ul class="list-group footer-list">
+                        <li class="list-group-item">Find Stores
+                        </li>
+                        <li class="list-group-item">Customer Service
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-4">
+                    <h3 class="text-start p-3">About the website</h3>
+                    <ul class="list-group footer-list">
+                        <li class="list-group-item">Time Zone's e-commerce terms and conditions
+                        </li>
+                        <li class="list-group-item">Privacy Policy
+                        </li>
+                        <li class="list-group-item">Cookies</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-sm-6 mt-5">
+                    <h5 class="mt-5">Download our app</h5>
+                    <div class="blend-container">
+                        <img src="data:image/png;base64,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"
+                            class="img-fluid w-75" alt="App Logos">
+                    </div>
+                </div>
+            </div>
+            <p class="mt-5">Copyright ©2023 -
+                <script>document.write(new Date().getFullYear())</script> All rights reserved
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script>
+    const radios = document.querySelectorAll('input[name="optradio"]');
+    const paymentMessage = document.getElementById('payment-message');
+    const checkoutButton = document.getElementById('checkout-button');
+
+    radios.forEach(radio => {
+        radio.addEventListener('change', (event) => {
+            switch(event.target.value) {
+                case 'visa':
+                    paymentMessage.textContent = 'Pay via Visa; you can pay with your credit card if you don’t have a Visa account.';
+                    checkoutButton.textContent = 'Proceed to Visa';
+                    break;
+                case 'paypal':
+                    paymentMessage.textContent = 'Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.';
+                    checkoutButton.textContent = 'Proceed to PayPal';
+                    break;
+                case 'credit-card':
+                    paymentMessage.textContent = 'Pay via Credit Card; please enter your credit card details.';
+                    checkoutButton.textContent = 'Proceed to Credit Card';
+                    break;
+                case 'stripe':
+                    paymentMessage.textContent = 'Pay via Stripe; you can pay with your credit card if you don’t have a Stripe account.';
+                    checkoutButton.textContent = 'Proceed to Stripe';
+                    break;
+                default:
+                    paymentMessage.textContent = 'Select a payment method.';
+                    checkoutButton.textContent = 'Proceed to payment';
+            }
+        });
+    });
+</script>
+</html>
