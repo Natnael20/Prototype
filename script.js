@@ -28,8 +28,9 @@ function scrollToTop() {
   function redirectToProduct() {
         window.location.href = 'product.html';
     }
-    // Set the countdown end time (e.g., 5 minutes from now)
-    let countdownTime = new Date().getTime() + (5 * 60 * 1000); // 5 minutes from now
+
+    let countdownTime = new Date().getTime() + (40 * 24 * 60 * 60 * 1000); // 40 days in milliseconds
+
 
 function updateCountdown() {
     let now = new Date().getTime();
