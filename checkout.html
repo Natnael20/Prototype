@@ -219,8 +219,8 @@
                         <p class="fw-bold text-uppercase">visa</p>
                         <input type="radio" id="paypal" class="form-check-input" name="optradio" value="paypal">
                         <p class="fw-bold text-uppercase">paypal</p>
-                        <input type="radio" id="credit-card" class="form-check-input" name="optradio" value="credit-card">
-                        <p class="fw-bold text-uppercase">credit-card</p>
+                        <input type="radio" id="apple-pay" class="form-check-input" name="optradio" value="credit-card">
+                        <p class="fw-bold text-uppercase">Apple-Pay</p>
                         <input type="radio" id="stripe" class="form-check-input" name="optradio" value="stripe">
                         <p class="fw-bold text-uppercase">stripe</p>
                     </div>
@@ -320,9 +320,9 @@
                     paymentMessage.textContent = 'Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.';
                     checkoutButton.textContent = 'Proceed to PayPal';
                     break;
-                case 'credit-card':
-                    paymentMessage.textContent = 'Pay via Credit Card; please enter your credit card details.';
-                    checkoutButton.textContent = 'Proceed to Credit Card';
+                case 'apple-pay':
+                    paymentMessage.textContent = 'Pay via Apple-Pay; please enter your Apple-Pay details.';
+                    checkoutButton.textContent = 'Proceed to Apple-Pay';
                     break;
                 case 'stripe':
                     paymentMessage.textContent = 'Pay via Stripe; you can pay with your credit card if you don’t have a Stripe account.';
