@@ -92,11 +92,16 @@
                                                 <option value="Drinks">
                                                 <option value="Banana">
                                             </datalist>
-                                            <button class="microphone" type="button"><i class="fa fa-microphone"></i></button>
+                                            <button class="microphone" type="button" onclick="openListeningBox()"><i class="fa fa-microphone"></i></button>
                                         <button class="btn" type="submit"><i class="fa fa-search"></i></button>
                                     </form>
                                 </div>
                             </div>
+                        </div>
+                        <div id="listeningBox" class="listening-box">
+                            <p>🎤 Listening...</p>
+                            <button onclick="closeListeningBox()">Stop Listening</button>
+                            <span class="close-listening" onclick="closeListeningBox()">×</span>
                         </div>
                         <a class="text-decoration-none text-black" href="login.html">
                             <i class="fa fa-user-o" aria-hidden="true"></i>
