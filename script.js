@@ -117,20 +117,25 @@ function startReading() {
 }
 
 function openSearch() {
-    document.getElementById("myOverlay").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block"; // Show the search overlay
+    document.getElementById("listeningBox").style.display = "none"; // Hide the listening box when search is opened
 }
 
 function closeSearch() {
-    document.getElementById("myOverlay").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none"; // Hide the search overlay
+    document.getElementById("listeningBox").style.display = "none"; // Also hide the listening box when search is closed
 }
 
 function openListeningBox() {
-    document.getElementById("listeningBox").style.display = "block";
+    if (document.getElementById("myOverlay").style.display === "block") {
+        document.getElementById("listeningBox").style.display = "block"; // Show the listening box only when the search box is open
+    }
 }
 
 function closeListeningBox() {
-    document.getElementById("listeningBox").style.display = "none";
+    document.getElementById("listeningBox").style.display = "none"; // Hide the listening box when the stop button is clicked
 }
+
 
 // Open the chat window
 function openChatWindow() {
