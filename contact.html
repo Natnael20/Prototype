@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://preview.colorlib.com/theme/timezone/assets/img/logo/logo.png.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="https://preview.colorlib.com/theme/timezone/assets/img/logo/logo.png.webp"
+        type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,6 +16,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Contact</title>
 </head>
+
 <body>
     <div class="container-fluid">
         <div class="row bg-danger d-flex justify-content-end align-items-end">
@@ -73,9 +76,10 @@
                 </div>
                 <div class="collapse navbar-collapse mt-2 justify-content-end">
                     <div class="right-content">
-                        <a href="text-decoration-none text-black">
+                        <a href="#" onclick="startReading()">
                             <i class="fa fa-microphone" style="margin-top: 7px;" aria-hidden="true"></i>
                         </a>
+                        <p id="readingText" class="reading-animation">📢 Reading aloud...</p>
                         <div class="seeach-button">
                             <button href="" class="openBtn" onclick="openSearch()">
                                 <i class="fa fa-search" aria-hidden="true"></i>
@@ -84,19 +88,26 @@
                                 <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
                                 <div class="overlay-content">
                                     <form action="/action_page.php">
-                                        <input type="text" placeholder="Search.." list="suggestions" autocomplete="on" class="form-control" name="search">
-                                            <datalist id="suggestions">
-                                                <option value="laptop">
-                                                <option value="samsung">
-                                                <option value="headphone">
-                                                <option value="earphone">
-                                                <option value="speaker">
-                                            </datalist>
-                                            <button class="microphone" type="button"><i class="fa fa-microphone"></i></button>
+                                        <input type="text" placeholder="Search.." list="suggestions" autocomplete="on"
+                                            class="form-control" name="search">
+                                        <datalist id="suggestions">
+                                            <option value="Meat">
+                                            <option value="Fish">
+                                            <option value="Dairy food">
+                                            <option value="Drinks">
+                                            <option value="Banana">
+                                        </datalist>
+                                        <button class="microphone" type="button" onclick="openListeningBox()"><i
+                                                class="fa fa-microphone"></i></button>
                                         <button class="btn" type="submit"><i class="fa fa-search"></i></button>
                                     </form>
                                 </div>
                             </div>
+                        </div>
+                        <div id="listeningBox" class="listening-box">
+                            <p>🎤 Listening...</p>
+                            <button onclick="closeListeningBox()">Stop Listening</button>
+                            <span class="close-listening" onclick="closeListeningBox()">×</span>
                         </div>
                         <a class="text-decoration-none text-black" href="login.html">
                             <i class="fa fa-user-o" aria-hidden="true"></i>
@@ -110,19 +121,39 @@
         </nav>
     </div>
     <div class="container-fluid map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2035.7143943295164!2d18.062473711430368!3d59.32102597450432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTnCsDE5JzE1LjciTiAxOMKwMDMnNTQuMiJF!5e0!3m2!1sen!2sse!4v1738940230683!5m2!1sen!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2035.7143943295164!2d18.062473711430368!3d59.32102597450432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTnCsDE5JzE1LjciTiAxOMKwMDMnNTQuMiJF!5e0!3m2!1sen!2sse!4v1738940230683!5m2!1sen!2sse"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="container-fluid scroll" id="second-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 second-col">
+                    <h1>Select Your New Perfect Style</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo velit id earum fugiat
+                        atque, placeat eum ullam iure dicta sequi optio hic modi.</p>
+                    <div class="second-col-button">
+                        <botton class="btn">Shop Now</botton>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6 second-col2">
+                    <img src="https://preview.colorlib.com/theme/timezone/assets/img/hero/watch.png" alt=""
+                        class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col">
                 <button class="btn-top" onclick="scrollToTop()"><i class="fa fa-arrow-up" aria-hidden="true"></i>
                 </button>
-                <div class="col">
-                    <button class="btn-top" onclick="scrollToTop()"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-                    </button>
-                    <div class="chat-img-container">
-                        <span class="badge">1</span>
-                        <img src="https://www.shutterstock.com/image-vector/call-center-customer-support-vector-600nw-2285364015.jpg" alt="customer assistant" class="img-fluid chat-img">
-                    </div>
+                <div class="chat-container">
+                    <span class="badge">1</span>
+                    <img onclick="openChatWindow()"
+                        src="https://www.shutterstock.com/image-vector/call-center-customer-support-vector-600nw-2285364015.jpg"
+                        alt="customer assistant" class="img-fluid chat-img">
                 </div>
             </div>
         </div>
@@ -136,16 +167,18 @@
                     </div>
                     <div class="form-group">
                         <div class="user-input">
-                            <input type="text" id="firstname" class="p-2" name="firstname" placeholder="Firstname" required>
+                            <input type="text" id="firstname" class="p-2" name="firstname" placeholder="Firstname"
+                                required>
                             <input type="email" id="email" class="p-2" name="email" placeholder="Email" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="subject" style="width: 100%;" id="subject" class="mt-3 p-2" name="subject" placeholder="Subject" required>
+                        <input type="subject" style="width: 100%;" id="subject" class="mt-3 p-2" name="subject"
+                            placeholder="Subject" required>
                     </div>
                     <div class="p-1">
                         <button class="btn mt-5 contact-button" type="button">
-                        <a href="mailto:support@gmail.com" class="text-decoration-none">Send</a></button>
+                            <a href="mailto:support@gmail.com" class="text-decoration-none">Send</a></button>
                     </div>
                 </form>
             </div>
@@ -164,14 +197,15 @@
                         </div>
                         <div class="telephone-info">
                             <h4><a href="tel:00(440)9865562" class="text-decoration-none text-black">0771 - 55 44 00
-                            </a></h4>
+                                </a></h4>
                             <p>Opening times: Monday - Friday: 7 - 22 <br>Calling hours: Monday - Friday: 10 - 4</p>
                         </div>
                         <div class="envelope-logo mt-3">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                         </div>
                         <div class="envelope-info">
-                            <h4><a href="mailto:support@hotmail.com" class="text-decoration-none text-black">ehandla@timeZone.com</a></h4>
+                            <h4><a href="mailto:support@hotmail.com"
+                                    class="text-decoration-none text-black">ehandla@timeZone.com</a></h4>
                             <p>Send us your query anytime!</p>
                         </div>
                     </div>
@@ -236,33 +270,35 @@
             </p>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 <script>
     function openSearch() {
-    document.getElementById("myOverlay").style.display = "block";
-  }
-  
-  function closeSearch() {
-    document.getElementById("myOverlay").style.display = "none";
-  }
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function closeSearch() {
+        document.getElementById("myOverlay").style.display = "none";
+    }
 
 
-  function toggleCategory(element) {
-    // Remove the active class from all category elements
-    document.querySelectorAll('.new-products, .prices, .popular-products').forEach(function (el) {
-        el.classList.remove('active-category');
-    });
+    function toggleCategory(element) {
+        // Remove the active class from all category elements
+        document.querySelectorAll('.new-products, .prices, .popular-products').forEach(function (el) {
+            el.classList.remove('active-category');
+        });
 
-    // Add the active class to the clicked category element
-    element.classList.add('active-category');
-}
+        // Add the active class to the clicked category element
+        element.classList.add('active-category');
+    }
 
-function scrollToTop() {
-    // Smooth scrolling to the top of the page
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
+    function scrollToTop() {
+        // Smooth scrolling to the top of the page
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 </script>
+
 </html>

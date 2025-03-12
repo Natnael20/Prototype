@@ -28,8 +28,9 @@ function scrollToTop() {
   function redirectToProduct() {
         window.location.href = 'product.html';
     }
-
-    let countdownTime = new Date().getTime() + (40 * 24 * 60 * 60 * 1000); // 40 days in milliseconds
+    // Set the countdown end time (e.g., 5 minutes from now)
+    // Set the countdown end time (e.g., 40 days from now)
+let countdownTime = new Date().getTime() + (40 * 24 * 60 * 60 * 1000); // 40 days in milliseconds
 
 
 function updateCountdown() {
@@ -104,4 +105,63 @@ function toggleCategory(element) {
 
     // Add the active class to the clicked category element
     element.classList.add('active-category');
+}
+
+
+function startReading() {
+    let readingText = document.getElementById("readingText");
+    readingText.style.display = "block"; // Show the text
+    setTimeout(() => {
+        readingText.style.display = "none"; // Hide after 3 seconds
+    }, 7000);
+}
+
+function openSearch() {
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+function openListeningBox() {
+    document.getElementById("listeningBox").style.display = "block";
+}
+
+function closeListeningBox() {
+    document.getElementById("listeningBox").style.display = "none";
+}
+
+// Open the chat window
+function openChatWindow() {
+    document.getElementById("chatWindow").style.display = "flex";
+    // Hide the badge by changing its display property
+    var badge = document.getElementsByClassName("badge")[0]; // Get the first element with class 'badge'
+    badge.style.display = "none";
+}
+
+// Close the chat window
+function closeChatWindow() {
+    document.getElementById("chatWindow").style.display = "none";
+}
+
+// Send a message from the user
+function sendMessage() {
+    var input = document.getElementById("chatInput");
+    if (input.value.trim() !== "") {
+        var chatBody = document.querySelector(".chat-body");
+        var userMessage = document.createElement("div");
+        userMessage.classList.add("message-bubble");
+        userMessage.innerText = input.value;
+        chatBody.appendChild(userMessage);
+        input.value = "";
+
+        // Simulate AI response
+        setTimeout(() => {
+            var aiMessage = document.createElement("div");
+            aiMessage.classList.add("message-bubble");
+            aiMessage.innerText = "AI Assistant: Thank you for your message!";
+            chatBody.appendChild(aiMessage);
+        }, 1000);
+    }
 }

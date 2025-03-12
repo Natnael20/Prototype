@@ -144,6 +144,16 @@ p {
     color: var(--red);
 }
 
+#readingText {
+    display: none;
+    font-size: 14px;
+    color: #28a745;
+    font-weight: bold;
+    position: absolute;
+    top: 60px;
+    right: 80px;
+}
+
 .openBtn {
     background-color: inherit;
     border: none;
@@ -234,6 +244,54 @@ p {
     background: #bbb;
 }
 
+/* 🔹 Floating Listening Box */
+.listening-box {
+    display: none;
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 100;
+    width: 200px;
+}
+
+.listening-box p {
+    font-size: 16px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.listening-box button {
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.listening-box button:hover {
+    background: black;
+    color: white;
+}
+
+.close-listening {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--red);
+    font-weight: bold;
+}
+
+.close-listening:hover {
+    color: darkred;
+}
 
 .btn-top {
     position: fixed;
@@ -248,43 +306,129 @@ p {
     font-size: 1.1rem;
 }
 
+/* Chat Icon */
+.chat-img-container {
+    position: relative;
+    cursor: pointer;
+}
+
 .chat-img {
     position: fixed;
-    top: 86%;
-    right: 10px;
-    mix-blend-mode: multiply; /* Blend mode to interact with background */
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    padding: 8px 12px;
-    z-index: 1;
-    width: 7%; /* Default width for larger screens */
-    transition: width 0.3s ease; /* Smooth transition for width */
+    mix-blend-mode: multiply; /* Blends the image with its background */
 }
 
 .badge {
     position: fixed;
-    top: 86%;
-    right: 15px;
-    font-size: 1rem;
-    color: white;
-    border-radius: 50%;
+    bottom: 50px;
+    right: 20px;
     background-color: red;
-    padding: 10px;
-    text-align: center;
+    color: white;
+    font-size: 16px;
+    border-radius: 50%;
+    padding: 5px;
     z-index: 2;
-    height: 35px;
+    width: 2.5%;
+    height: 5%;
 }
 
-@media screen and (max-width: 1100px) and (min-width: 500px) {
-    .chat-img {
-        width: 10%; /* Adjusted width for medium screens */
+/* Chat Window */
+.chat-window {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    width: 300px;
+    max-height: 400px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Chat Header */
+.chat-header {
+    background-color: var(--red);
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.close-chat {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Chat Body */
+.chat-body {
+    padding: 15px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.message-bubble {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+/* Chat Footer */
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+.chat-footer button {
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all .7s linear;
+
+}
+
+.chat-footer button:hover {
+    background-color: var(--red);
+    color: white;
+    transition: all .7s linear;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
-@media screen and (max-width: 500px) {
-    .chat-img {
-        width: 15%; /* Increased width for smaller screens */
-    }
-}
 
 
 .chat-img:hover {
