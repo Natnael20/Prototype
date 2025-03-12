@@ -123,6 +123,33 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn-top" onclick="scrollToTop()"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </button>
+                <div class="chat-container">
+                    <span class="badge">1</span>
+                    <img onclick="openChatWindow()" src="https://www.shutterstock.com/image-vector/call-center-customer-support-vector-600nw-2285364015.jpg" alt="customer assistant" class="img-fluid chat-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="chatWindow" class="chat-window">
+        <div class="chat-header">
+            <span>AI Assistant</span>
+            <button class="close-chat" onclick="closeChatWindow()">×</button>
+        </div>
+        <div class="chat-body">
+            <div class="message-bubble">
+                <span>Hi! How can I assist you today?</span>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" placeholder="Type your message..." id="chatInput">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
     <div class="container third-container">
         <div class="row">
             <div class="col-lg-5" id="background">
